@@ -1,0 +1,53 @@
+
+SQL*Plus: Release 11.2.0.2.0 Production on Mon Mar 11 08:51:34 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+SQL> conn
+Enter user-name: lab1ctrg4@orcl11g
+Enter password:
+Connected.
+SQL> descr customer;
+ERROR:
+ORA-04043: object customer does not exist
+
+
+SQL> create table customer(customerID number primary key,name varchar2(20), email varchar2(20),mobileNumber varchar(20),password varchar(20),balance number);
+
+Table created.
+
+SQL> descr customer;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CUSTOMERID                                NOT NULL NUMBER
+ NAME                                               VARCHAR2(20)
+ EMAIL                                              VARCHAR2(20)
+ MOBILENUMBER                                       VARCHAR2(20)
+ PASSWORD                                           VARCHAR2(20)
+ BALANCE                                            NUMBER
+
+SQL> create table transaction(tid number primary key,mobno varchar2(20), type varchar2(20),amount number,balance number);
+create table transaction(tid number primary key,mobno varchar2(20), type varchar2(20),amount number,balance number)
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+SQL> create table transactions(tid number primary key,mobno varchar2(20), type varchar2(20),amount number,balance number);
+
+Table created.
+
+SQL> descr transactions;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ TID                                       NOT NULL NUMBER
+ MOBNO                                              VARCHAR2(20)
+ TYPE                                               VARCHAR2(20)
+ AMOUNT                                             NUMBER
+ BALANCE                                            NUMBER
+
+SQL> CREATE SEQUENCE tid_seq MINVALUE 1 MAXVALUE 999999 START WITH 100 INCREMENT BY 1 CACHE 20;
+
+Sequence created.
+
+SQL>
