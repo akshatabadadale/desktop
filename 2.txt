@@ -1,0 +1,77 @@
+
+Feature: Equipment Tracking
+  
+  
+Scenario: Page loads
+Given User is on Equipment form
+When user enters url
+Then page should be loaded  
+
+Scenario: Invalid Purchase Method
+Given User is on Equipment form
+When user enters invalid purchaseMethod
+Then display 'Please fill the Purchase Method' 
+
+Scenario: Invalid Sequence Number 
+Given User is on Equipment form
+When user enters invalid sequenceNumber
+Then display 'Please fill the Sequence Number'
+
+Scenario: Invalid Equipment Code
+Given User is on Equipment form
+When user enters invalid equipmentCode
+Then display 'Please fill the Equipment Code'
+
+Scenario: Invalid Dept Id
+Given User is on Equipment form
+When user enters invalid deptId
+Then display 'Please fill the Dept ID'
+
+Scenario: Invalid Use Status
+Given User is on Equipment form
+When user enters invalid useStatus
+Then display 'Please fill the Use Status'
+
+Scenario: Invalid Cost Center
+Given User is on Equipment form
+When user enters invalid costCenter
+Then display 'Please fill the Cost Center'
+
+Scenario: Invalid Install Date
+Given User is on Equipment form
+When user enters invalid installDate
+Then display 'Please fill the Install Date'
+
+Scenario: Invalid Audit Indicator
+Given User is on Equipment form
+When user enters invalid auditIndicator
+Then display 'Please fill the Audit Indicator'
+
+Scenario: Invalid Audit Date
+Given User is on Equipment form
+When user enters invalid auditDate
+Then display 'Please fill the Audit Date'
+
+Scenario: Invalid Stock
+Given User is on Equipment form
+When user enters invalid stock
+Then display 'Please fill the Stock'
+
+Scenario: Invalid Location
+Given User is on Equipment form
+When user enters invalid location
+Then display 'Please fill the Location'
+
+Scenario: Invalid Location Id
+Given User is on Equipment form
+When user enters invalid locationId
+Then display 'Please fill the Location ID'
+
+Scenario: Submit on Register
+Given User is on Equipment form
+When User register form
+Then show successful register alert
+
+
+
+

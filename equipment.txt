@@ -1,0 +1,24 @@
+<script language="javascript">
+
+function chkEmpty(){
+var equip = /^[0-9]{8}$/;
+var equip1 = /^[0-9]{3}$/;
+
+
+if (document.frmReg.txtpurchasemethod.value == "") {alert("Please fill the Purchase Method");}
+else if (equip.test(document.frmReg.txtsequenceNumber.value) == false) { alert("Please enter valid Sequence Number");}
+else if (equip1.test(document.frmReg.txtequipmentCode.value) == false) { alert("Please enter valid Equipment Code");}
+else if (document.frmReg.txtdeptid.value == "") {alert("Please fill the Dept ID");}
+else if (document.frmReg.txtusestatus.value == ""){alert("Please fill the Use Status");}
+else if (document.frmReg.txtcostCenter.value == "") {alert("Please fill the Cost Center");}
+else if (document.frmReg.txtinstallDate.value == "") {alert("Please fill the Install Date");}
+else if (document.frmReg.txtauditIndicator.value == "") {alert("Please fill the Audit Indicator");}
+else if (document.frmReg.txtauditDate.value == "") {alert("Please fill the Audit Date");}
+else if (document.frmReg.txtstock.value == "") {alert("Please fill the Stock");}
+else {alert("Equipment details are validated.");
+window.location = 'Dashboard.html';
+}
+}
+
+
+</script>

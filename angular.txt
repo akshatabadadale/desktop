@@ -1,0 +1,77 @@
+1) go to cmd and type
+npm install -g @angular/cli@6.2.8
+
+2)got to google and Download zip file of vscode 64bit, extract and run code.exe
+
+3)Press ctrl + `
+
+4)type
+C:\Windows\System32\cmd.exe /k "C:\Program Files\nodejs\nodevars.bat"
+
+5)type
+ng new MyAngularApp
+
+6)type
+cd MyAngularApp
+
+7)type
+ng serve
+
+8)after succesfull run open browser and type http://localhost:4200
+
+
+9)ctrl c
+10)change directory-->cd..
+11)ng new my-app --skip-git
+
+12)cd my-app
+
+13)generate component--> ng generate component "component name"
+ 			ng g c home                     
+			ng g c about
+                      	ng g c contact
+
+ROUTE LOGIC
+
+14)app.module.ts
+import {RouterModule, Routes} from '@angular/router';
+
+
+15)routes
+
+const routes: Routes = [
+{path: '',redirectTo:'/home' , pathMatch :'full'},
+{path: 'home', component: HomeComponent},
+{path: 'about', component: AboutComponent},
+{path: 'contact', component: ContactComponent},
+{path: '**',redirectTo:'/home', pathMatch :'full'}
+];
+
+
+16)IN Ngmodule
+
+imports: [
+    BrowserModule, RouterModule.forRoot(routes)
+  ],
+
+17)IN TEMPLATE-->
+component.html
+<router-outlet></router-outlet>
+
+
+
+
+18)In component.ts
+
+export class AppComponent {
+  title = 'my-app';
+  menu = ['home','about','contact'];
+}
+
+
+
+19)component.html
+ <li *ngFor='let item of menu'>
+    <a routerLink='/{{item}}'>{{item | titlecase}}</a>
+  </li>
+

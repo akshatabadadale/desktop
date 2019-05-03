@@ -1,0 +1,15 @@
+db.driver = oracle.jdbc.OracleDriver
+db.url = jdbc:oracle:thin:@10.51.103.201:1521:orcl11g
+db.username = lab1ctrg4
+db.password = lab1coracle
+
+lab1ctrg4@orcl11g
+lab1coracle
+
+APPLICATION PROPERTIES --> spring Boot.
+spring.datasource.url=jdbc:oracle:thin:@10.51.103.201:1521:orcl11g
+spring.datasource.driver-class-name= oracle.jdbc.OracleDriver
+spring.datasource.username=lab1ctrg4
+spring.datasource.password=lab1coracle
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true

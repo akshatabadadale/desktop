@@ -1,0 +1,50 @@
+Feature: Computer Track
+
+Scenario: User Visit CompTrack Page
+Given User is on CompTrack page
+Then Validate CompTrack page title 
+	
+Scenario: Valid Computer Name
+Given User is on Computer form
+When User enters invalid computer name
+Then display 'Please fill the Computer Name'
+
+Scenario: Valid Disk Capacity
+Given User is on Computer form
+When user enters invalid disk capacity
+Then display 'Please fill the Disk Capacity'
+
+Scenario: Valid Total Installed Memory
+Given User is on Computer form
+When user enters invalid Total Installed Memory
+Then display 'Please fill the Total Installed Memory'
+
+Scenario: Valid Network Card Number
+Given User is on Computer form
+When user enters invalid network Card Number
+Then display 'Please fill the Network Card Number'
+
+Scenario: Valid Network Card Manufacturer
+Given User is on Computer form
+When user enters invalid network Card Manufacturer
+Then display 'Please fill the Network Card Manufacturer'
+
+Scenario: Valid Free Space
+Given User is on Computer form
+When user enters invalid free Space
+Then display 'Please fill the Free Space'
+
+Scenario: Valid Operating System
+Given User is on Computer form
+When user enters invalid operating System
+Then display 'Please fill the Operating System'
+
+Scenario: Valid Os Version
+Given User is on Computer form
+When user enters invalid os Version
+Then display 'Please fill the OS Version'
+
+Scenario: Submit form on submit
+Given User is on Computer form
+When User submit form
+Then show successful submit alert
